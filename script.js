@@ -178,3 +178,9 @@ viewer.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') vNext.click();
   if (e.key === 'ArrowLeft') vPrev.click();
 });
+
+/* Pratinjau CV */
+const cvViewer = document.getElementById('cv-viewer');
+document.querySelectorAll('[data-cv]').forEach((btn) => btn.addEventListener('click', () => cvViewer.showModal()));
+cvViewer.querySelector('.cv-close').addEventListener('click', () => cvViewer.close());
+cvViewer.addEventListener('click', (e) => { if (e.target === cvViewer) cvViewer.close(); });

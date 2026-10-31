@@ -58,7 +58,7 @@
           <p class="typing" aria-label="System Analyst dan Web Developer">Saya seorang <span class="typed" aria-hidden="true">System Analyst</span><span class="caret" aria-hidden="true"></span></p>
           <div class="actions">
             <a class="btn btn-gold" href="#proyek">Lihat proyek</a>
-            <a class="btn btn-line" href="cv/CV_Bayu_Setia_Nugraha.pdf" download>Unduh CV</a>
+            <button class="btn btn-line" type="button" data-cv>Lihat CV</button>
           </div>
           <ul class="socials">
             <li><a href="https://github.com/bayusetian" target="_blank" rel="noopener">GitHub<span class="sr-only"> (buka di tab baru)</span></a></li>
@@ -322,6 +322,19 @@
       <button class="viewer-prev" type="button">Sebelumnya</button>
       <span class="viewer-count" aria-live="polite"></span>
       <button class="viewer-next" type="button">Berikutnya</button>
+    </div>
+  </dialog>
+
+  <dialog id="cv-viewer" aria-labelledby="cv-title">
+    <div class="viewer-head">
+      <p id="cv-title" class="viewer-title">Curriculum Vitae</p>
+      <div class="cv-actions">
+        <a class="cv-download" href="cv/CV_Bayu_Setia_Nugraha.pdf" download>Unduh PDF</a>
+        <button class="viewer-close cv-close" type="button">Tutup</button>
+      </div>
+    </div>
+    <div class="cv-page">
+      <img src="img/cv-preview.webp" width="1241" height="1754" loading="lazy" alt="Pratinjau CV Bayu Setia Nugraha">
     </div>
   </dialog>
 

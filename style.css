@@ -180,8 +180,9 @@ button { font: inherit; color: inherit; }
 .work-links a { display: inline-flex; align-items: center; min-height: 44px; }
 
 /* Certificates */
-.certs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1.25rem; }
-.cert { display: grid; gap: .3rem; width: 100%; padding: .9rem .9rem 1.2rem; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); text-align: left; cursor: zoom-in; transition: transform .25s, box-shadow .25s; }
+.certs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1.25rem; align-items: stretch; }
+.certs li { display: flex; }
+.cert { display: flex; flex-direction: column; gap: .3rem; width: 100%; height: 100%; padding: .9rem .9rem 1.2rem; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); text-align: left; cursor: zoom-in; transition: transform .25s, box-shadow .25s; }
 .cert img { width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: #fff; border-radius: 10px; margin-bottom: .7rem; }
 .cert-name { font-family: var(--serif); font-size: 1.15rem; line-height: 1.25; color: var(--teal); }
 .cert-meta { font-size: .88rem; color: var(--muted); }
@@ -343,3 +344,18 @@ button { font: inherit; color: inherit; }
 /* Paragraf rata kiri kanan */
 .about-text p, .timeline p:not(.when), .magang-text p, .work-desc, .org p:not(.when), .bullets li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .viewer-figure figcaption:empty { display: none; }
+
+/* Pratinjau CV */
+#cv-viewer { width: min(860px, 94vw); max-height: 94vh; padding: 1rem 1.25rem 1.25rem; border: 0; border-radius: 18px; background: var(--paper); color: var(--ink); }
+#cv-viewer::backdrop { background: rgba(22, 63, 61, .82); }
+.cv-actions { display: flex; gap: .6rem; flex-wrap: wrap; }
+.cv-download { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; background: var(--gold); color: var(--teal-deep); font-weight: 700; text-decoration: none; }
+.cv-download:hover { background: var(--gold-soft); color: var(--teal-deep); }
+.cv-page { max-height: 78vh; overflow-y: auto; border-radius: 10px; background: #fff; border: 1px solid var(--line); }
+.cv-page img { width: 100%; }
+@media (max-width: 760px) {
+  #cv-viewer { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; margin: 0; border-radius: 0; padding: .9rem; display: none; }
+  #cv-viewer[open] { display: flex; flex-direction: column; }
+  #cv-viewer .viewer-head { flex-wrap: wrap; }
+  .cv-page { flex: 1; max-height: none; }
+}
