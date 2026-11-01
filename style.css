@@ -120,7 +120,7 @@ button { font: inherit; color: inherit; }
 .about-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 45%; }
 .contact-card { position: relative; margin: -3.5rem 1.5rem 0 auto; width: min(100%, 300px); padding: 1.2rem 1.4rem; border-radius: 16px; background: var(--teal); color: var(--cream); display: grid; gap: .3rem; box-shadow: 0 14px 30px rgba(22, 63, 61, .25); }
 .contact-card h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; color: var(--gold-soft); }
-.contact-card p { font-size: .92rem; overflow-wrap: anywhere; }
+.contact-card p { font-size: .92rem; overflow-wrap: anywhere; text-align: left; }
 .contact-card a { color: var(--cream); display: inline-flex; align-items: center; min-height: 44px; }
 
 /* Timeline */
@@ -208,13 +208,9 @@ button { font: inherit; color: inherit; }
 .foot-links a:hover { color: var(--gold-soft); }
 
 /* Floating buttons */
-.wa, .to-top { position: fixed; right: 1.25rem; z-index: 40; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; text-decoration: none; box-shadow: 0 10px 24px rgba(0, 0, 0, .2); }
-.wa { bottom: 1.25rem; width: auto; height: 52px; padding: 0 1.1rem 0 1rem; display: inline-flex; gap: .5rem; border-radius: 999px; background: #25D366; color: #0B3B23; font-weight: 700; font-size: .92rem; transition: opacity .25s, transform .25s; }
-.wa.hide { opacity: 0; transform: translateY(12px) scale(.9); pointer-events: none; }
+.to-top { position: fixed; right: 1.25rem; z-index: 40; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; text-decoration: none; box-shadow: 0 10px 24px rgba(0, 0, 0, .2); }
 .swipe-hint { display: none; margin-top: .25rem; text-align: center; font-size: .85rem; color: var(--muted); }
-.wa svg { width: 26px; height: 26px; fill: #0B3B23; order: -1; }
-.wa:hover { transform: scale(1.06); }
-.to-top { bottom: calc(1.25rem + 66px); width: 48px; height: 48px; margin-right: 4px; background: var(--teal); color: var(--cream); font-size: 1.3rem; opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .25s, transform .25s; }
+.to-top { bottom: 1.25rem; width: 48px; height: 48px; background: var(--teal); color: var(--cream); font-size: 1.3rem; opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .25s, transform .25s; }
 .to-top.show { opacity: 1; transform: none; pointer-events: auto; }
 
 /* Viewer */
@@ -317,7 +313,7 @@ button { font: inherit; color: inherit; }
   .magang-text .btn { width: 100%; }
   .contact-list { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
   .contact-list .btn { width: 100%; }
-  .foot { padding-bottom: 6rem; }
+  .foot { padding-bottom: 2.5rem; }
   .foot-inner { flex-direction: column; align-items: flex-start; }
   .foot-links { flex-direction: column; }
   #viewer { width: 100vw; max-width: 100vw; max-height: 100dvh; height: 100dvh; margin: 0; border-radius: 0; padding: .9rem; display: none; }
@@ -335,9 +331,6 @@ button { font: inherit; color: inherit; }
   .stats span { font-size: 1.9rem; }
   .work { min-height: 340px; }
   .contact-card { margin-right: .75rem; }
-  .wa { right: .85rem; bottom: .85rem; width: 52px; padding: 0; justify-content: center; }
-  .wa-label { display: none; }
-  .wa svg { width: 26px; height: 26px; }
   .to-top { display: none; }
 }
 

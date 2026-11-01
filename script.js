@@ -94,14 +94,12 @@ document.querySelectorAll('main section[id]').forEach((s) => secIo.observe(s));
 const bar = document.querySelector('.progress span');
 const toTop = document.querySelector('.to-top');
 const header = document.querySelector('.top');
-const wa = document.querySelector('.wa');
 let ticking = false;
 const onScroll = () => {
   const max = document.documentElement.scrollHeight - innerHeight;
   bar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
   toTop.classList.toggle('show', scrollY > 700);
   header.classList.toggle('scrolled', scrollY > 20);
-  wa.classList.toggle('hide', innerWidth <= 760 && scrollY < innerHeight * .8);
   ticking = false;
 };
 addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
@@ -132,7 +130,7 @@ const galleries = {
   setara: { title: 'Setara Booth, sistem photo booth', items: [
     ['img/setara-dashboard.webp', 'Dashboard admin: pendapatan, sesi foto, foto dicetak, dan status booth'],
     ['img/setara-booth.webp', 'Layar pembuka mode booth untuk pelanggan']] },
-  setda: { title: 'Magang di Setda Provinsi Jawa Barat', items: [
+  setda: { title: 'Magang di Sekretariat Daerah Provinsi Jawa Barat', items: [
     ['img/setda-index.webp', 'Halaman utama prototipe pendaftaran magang'],
     ['img/setda-registrasi.webp', 'Form registrasi akun peserta'],
     ['img/setda-dashboard.webp', 'Dashboard peserta magang'],
