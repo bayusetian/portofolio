@@ -58,7 +58,7 @@ const countUp = (el) => {
 };
 
 /* Muncul saat di-scroll */
-const revealEls = document.querySelectorAll('.about-text p, .contact-card, .timeline li, .softs li, .center-head > p, .skill-block, .tiles li, .stats li, .laptop, .magang-text, .work, .certs, .org');
+const revealEls = document.querySelectorAll('.about-text p, .contact-card, .timeline li, .center-head > p, .skill-block, .tiles li, .stats li, .laptop, .magang-text, .work, .certs, .org');
 revealEls.forEach((el) => {
   el.classList.add('reveal');
   const idx = [...el.parentElement.children].indexOf(el);
